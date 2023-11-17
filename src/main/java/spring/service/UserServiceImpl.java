@@ -8,6 +8,7 @@ import java.util.List;
 @Service
 @Transactional
 public class UserServiceImpl implements UserService{
+    @Inject
     private UserDAO userDAO;
     @Override
     public List<User> getAllUsers() {
@@ -26,3 +27,4 @@ public class UserServiceImpl implements UserService{
         userDAO.deleteUser(id);
     }
 }
+
